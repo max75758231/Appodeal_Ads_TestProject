@@ -10,7 +10,4 @@
 
     <string name="rewarded_failed">Rewarded video loading failed</string>
     <string name="interstitial_failed">Interstitial ad loading failed</string>
-
-    <string name="rewarded_loaded">Please, click again to show this rewarded video</string>
-    <string name="interstitial_loaded">Please, click again to show interstitial ad</string>
 </resources>

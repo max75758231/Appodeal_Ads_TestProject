@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.InterstitialCallbacks;
 
 import zonov.max.appodeal_ads_testproject.R;
@@ -22,8 +23,7 @@ public class AdInterstitialCallbacks implements InterstitialCallbacks {
     @Override
     public void onInterstitialLoaded(boolean b) {
         progressBar.setVisibility(View.INVISIBLE);
-        Toast.makeText(activity, activity.getString(R.string.interstitial_loaded), Toast.LENGTH_LONG)
-                .show();
+        Appodeal.show(activity, Appodeal.INTERSTITIAL);
     }
 
     @Override
@@ -40,11 +40,10 @@ public class AdInterstitialCallbacks implements InterstitialCallbacks {
 
     @Override
     public void onInterstitialClicked() {
-
+        progressBar.setVisibility(View.INVISIBLE);
     }
 
     @Override
     public void onInterstitialClosed() {
-
     }
 }

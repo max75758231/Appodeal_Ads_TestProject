@@ -1,6 +1,5 @@
 package zonov.max.appodeal_ads_testproject.callbacks;
 
-import android.app.Activity;
 import android.view.View;
 import android.widget.ProgressBar;
 

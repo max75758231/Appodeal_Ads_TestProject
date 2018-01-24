@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
+        Appodeal.disableNetwork(this, "applovin");
+        Appodeal.disableNetwork(this, "chartboost");
+        Appodeal.disableNetwork(this, "unity_ads");
+        Appodeal.disableNetwork(this, "mailru");
         Appodeal.disableLocationPermissionCheck();
         Appodeal.disableWriteExternalStoragePermissionCheck();
         Appodeal.initialize(this,
@@ -56,7 +60,6 @@ public class MainActivity extends AppCompatActivity {
         pb_rewarded.setVisibility(View.VISIBLE);
         Appodeal.initialize(this, getString(R.string.sdk_key), Appodeal.REWARDED_VIDEO);
         Appodeal.setRewardedVideoCallbacks(new AdRewardedVideoCallbacks(pb_rewarded, this));
-        Appodeal.show(this, Appodeal.REWARDED_VIDEO);
     }
 
     @OnClick (R.id.btn_mrec_video)
@@ -64,8 +67,7 @@ public class MainActivity extends AppCompatActivity {
         pb_mrec.setVisibility(View.VISIBLE);
         Appodeal.setMrecViewId(R.id.view_mrec);
         Appodeal.initialize(this, getString(R.string.sdk_key), Appodeal.MREC);
-        Appodeal.setMrecCallbacks(new AdMrecCallbacks(pb_mrec));
-        Appodeal.show(this, Appodeal.MREC);
+        Appodeal.setMrecCallbacks(new AdMrecCallbacks(pb_mrec, this));
     }
 
     @OnClick (R.id.btn_interstitial)
@@ -73,6 +75,5 @@ public class MainActivity extends AppCompatActivity {
         pb_interstitial.setVisibility(View.VISIBLE);
         Appodeal.initialize(this, getString(R.string.sdk_key), Appodeal.INTERSTITIAL);
         Appodeal.setInterstitialCallbacks(new AdInterstitialCallbacks(pb_interstitial, this));
-        Appodeal.show(this, Appodeal.INTERSTITIAL);
     }
 }

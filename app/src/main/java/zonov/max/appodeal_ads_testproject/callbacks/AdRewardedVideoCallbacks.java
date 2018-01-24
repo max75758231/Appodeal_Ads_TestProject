@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.appodeal.ads.Appodeal;
 import com.appodeal.ads.RewardedVideoCallbacks;
 
 import zonov.max.appodeal_ads_testproject.R;
@@ -22,8 +23,7 @@ public class AdRewardedVideoCallbacks implements RewardedVideoCallbacks {
     @Override
     public void onRewardedVideoLoaded() {
         progressBar.setVisibility(View.INVISIBLE);
-        Toast.makeText(activity, activity.getString(R.string.rewarded_loaded), Toast.LENGTH_LONG)
-                .show();
+        Appodeal.show(activity, Appodeal.REWARDED_VIDEO);
     }
 
     @Override
