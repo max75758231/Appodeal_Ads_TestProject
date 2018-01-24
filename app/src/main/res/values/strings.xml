@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Appodeal_Ads_TestProject</string>
+
+    <string name="sdk_key">1dc54ff54bd5dad74a0d7c084206f47d8a1c3a2dd8945683</string>
+
+    <string name="btn_banner_label">Banner showing</string>
+    <string name="btn_rewarded_video_label">Rewarded video showing</string>
+    <string name="btn_mrec_label">MREC showing</string>
+    <string name="btn_interstitial_label">Interstitial showing</string>
+
+    <string name="rewarded_failed">Rewarded video loading failed</string>
+    <string name="interstitial_failed">Interstitial ad loading failed</string>
+
+    <string name="rewarded_loaded">Please, click again to show this rewarded video</string>
+    <string name="interstitial_loaded">Please, click again to show interstitial ad</string>
+</resources>
