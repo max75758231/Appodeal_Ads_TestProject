@@ -6,118 +6,121 @@
     android:layout_height="match_parent"
     tools:context="zonov.max.appodeal_ads_testproject.MainActivity">
 
-    <Button
-        android:id="@+id/btn_banner"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/btn_banner_label"
-        app:layout_constraintEnd_toStartOf="@+id/pb_banner"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_rewarded_video"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/btn_rewarded_video_label"
-        app:layout_constraintEnd_toStartOf="@+id/pb_rewarded_video"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_banner" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_mrec_video"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/btn_mrec_label"
-        app:layout_constraintEnd_toStartOf="@+id/pb_mrec"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_rewarded_video" />
+            <LinearLayout
+                android:id="@+id/layout_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="8dp">
 
-    <Button
-        android:id="@+id/btn_interstitial"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/btn_interstitial_label"
-        app:layout_constraintEnd_toStartOf="@+id/pb_interstitial"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_mrec_video" />
+                <Button
+                    android:id="@+id/btn_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_banner_label"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp" />
 
-    <ProgressBar
-        android:id="@+id/pb_banner"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"/>
+                <ProgressBar
+                    android:id="@+id/pb_banner"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+            </LinearLayout>
 
-    <ProgressBar
-        android:id="@+id/pb_rewarded_video"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pb_banner"
-        android:visibility="invisible"/>
+            <LinearLayout
+                android:id="@+id/layout_rewarded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/layout_banner"
+                android:layout_margin="8dp">
 
-    <ProgressBar
-        android:id="@+id/pb_mrec"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pb_rewarded_video"
-        android:visibility="invisible"/>
+                <Button
+                    android:id="@+id/btn_rewarded_video"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_rewarded_video_label"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"/>
 
-    <ProgressBar
-        android:id="@+id/pb_interstitial"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pb_mrec"
-        android:visibility="invisible"/>
+                <ProgressBar
+                    android:id="@+id/pb_rewarded_video"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+            </LinearLayout>
 
-    <com.appodeal.ads.MrecView
-        android:id="@+id/view_mrec"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_interstitial"
-        android:visibility="gone"/>
+            <LinearLayout
+                android:id="@+id/layout_mrec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_rewarded"
+                android:orientation="horizontal"
+                android:layout_margin="8dp">
+
+                <Button
+                    android:id="@+id/btn_mrec_video"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_mrec_label"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <ProgressBar
+                    android:id="@+id/pb_mrec"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_interstitial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_mrec"
+                android:orientation="horizontal"
+                android:layout_margin="8dp">
+
+                <Button
+                    android:id="@+id/btn_interstitial"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_interstitial_label"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <ProgressBar
+                    android:id="@+id/pb_interstitial"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+
+            <com.appodeal.ads.MrecView
+                android:id="@+id/view_mrec"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:visibility="gone"
+                android:layout_below="@id/layout_interstitial" />
+
+        </RelativeLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
